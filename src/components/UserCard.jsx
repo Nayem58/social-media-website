@@ -1,4 +1,4 @@
-export const UserCards = (props) => {
+export const UserCard = (props) => {
   return (
     <div className="card">
       <div className="card__thumb">

@@ -1,5 +1,5 @@
 import "./App.css";
-import { UserCards } from "./components/User";
+import { UserCard } from "./components/UserCard";
 
 function App() {
   const empNames = [
@@ -17,7 +17,7 @@ function App() {
     },
     {
       name: "Romman",
-      title: "Front-End Mid",
+      title: "Front-End",
       photo:
         "https://www.americanbestit.com/images/meet-the-team/85462-kkr_p.jpeg",
     },
@@ -27,6 +27,18 @@ function App() {
       photo:
         "https://www.americanbestit.com/images/meet-the-team/81899-tofazzal-al-hoque-abit-profile-photo.jpg",
     },
+    {
+      name: "Jahangir",
+      title: "Sales Manager",
+      photo:
+        "https://www.americanbestit.com/images/meet-the-team/38589-jahangir-alam.jpg",
+    },
+    {
+      name: "Marof Billah",
+      title: "Creative Designer",
+      photo:
+        "https://www.americanbestit.com/images/meet-the-team/13858-marof-billah.jpg",
+    },
   ];
 
   return (
@@ -34,17 +46,18 @@ function App() {
       <div className="container">
         <h1>Employee Cards</h1>
         <div className="cards-grid">
-          {empNames.map((empName, key) => {
-            return (
-              <UserCards
-                key={key}
-                imgSrc={empName.photo}
-                imgAlt={empName.name}
-                name={empName.name}
-                title={empName.title}
-              />
-            );
-          })}
+          {empNames.map(
+            ({ photo, name, title }, key) =>
+              title !== "Front-End" && (
+                <UserCard
+                  key={key}
+                  imgSrc={photo}
+                  imgAlt={name}
+                  name={name}
+                  title={title}
+                />
+              )
+          )}
         </div>
       </div>
     </div>
