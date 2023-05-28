@@ -4,14 +4,55 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   height: 100vh;
+  font-family: "Rajdhani", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: slateblue;
+  font-size: 80px;
+  font-weight: 500;
 }
 
 img {
   width: auto;
   height: auto;
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: slateblue;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid slateblue;
+  color: slateblue;
+}
+
+button {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: slateblue;
+  border: 2px solid slateblue;
+  color: #fff;
 }
 
 .py-50px {
@@ -30,6 +71,30 @@ img {
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: start;
+}
+
+.text-right {
+  text-align: end;
+}
+
+.mt-10px {
+  margin-top: 10px;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.ml-10px {
+  margin-left: 10px;
+}
+
+.mr-10px {
+  margin-right: 10px;
 }
 
 .cards-grid {
@@ -61,4 +126,13 @@ img {
       font-style: italic;
     }
   }
+}
+
+.todoCard {
+  box-shadow: 0 0 10px 0 #00000020;
+  background-color: lavender;
+  padding: 100px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
