@@ -3,17 +3,18 @@ import { UserCard } from "./components/UserCard";
 import { useState } from "react";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+  const [showText, setShowText] = useState(true);
 
-  const handleSetInputValue = (e) => {
-    setInputValue(e.target.value);
+  const handleSetShowText = () => {
+    setShowText(!showText);
   };
+
   return (
-    <div className="py-50px">
+    <div className="py-50px text-center">
       <div className="container">
-        <h1 className="text-center">Input Name</h1>
-        <input type="text" onChange={handleSetInputValue} />
-        {inputValue}
+        <h1>Show/Hide Text</h1>
+        <button onClick={handleSetShowText}>Show/Hide</button>
+        {showText && <p>Displayed</p>}
       </div>
     </div>
   );
