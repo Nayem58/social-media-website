@@ -3,26 +3,17 @@ import { UserCard } from "./components/UserCard";
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [inputValue, setInputValue] = useState("");
 
-  const handleSetIncreaseCount = () => {
-    setCount(count + 1);
+  const handleSetInputValue = (e) => {
+    setInputValue(e.target.value);
   };
-  const handleSetDecreaseCount = () => {
-    setCount(count - 1);
-  };
-  const handleSetToZero = () => {
-    setCount(0);
-  };
-
   return (
     <div className="py-50px">
       <div className="container">
-        <h1 className="text-center">Counter</h1>
-        <div>Count: {count}</div>
-        <button onClick={handleSetIncreaseCount}>Increase</button>
-        <button onClick={handleSetDecreaseCount}>Decrease</button>
-        <button onClick={handleSetToZero}>Set to Zero</button>
+        <h1 className="text-center">Input Name</h1>
+        <input type="text" onChange={handleSetInputValue} />
+        {inputValue}
       </div>
     </div>
   );
